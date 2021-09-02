@@ -20,7 +20,8 @@ import java.util.Locale;
 public class Run {
 
     public static void main(String[] args) throws IOException {
-        initFrame();
+       System.out.println("Git for Android");
+		initFrame();
 //        System.out.println(generateSample());
     }
 
@@ -37,7 +38,7 @@ public class Run {
         TimeFrame window = new TimeFrame(period, reasoners);
         try {
             reader.read(window, "/home/tihomirski/Tihomir/Gazela/trendkill/truefx_com/DataSamples/sample-EURUSD-200-300.csv");
-        } catch (Exception e) {
+		} catch (Exception e) {
             e.printStackTrace();
         }
     }
