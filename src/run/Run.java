@@ -37,7 +37,8 @@ public class Run {
         long period = 3 * 1000;
         TimeFrame window = new TimeFrame(period, reasoners);
         try {
-            reader.read(window, "/home/tihomirski/Tihomir/Gazela/trendkill/truefx_com/DataSamples/sample-EURUSD-200-300.csv");
+            reader.read(window, "ticks.csv");
+			
 		} catch (Exception e) {
             e.printStackTrace();
         }

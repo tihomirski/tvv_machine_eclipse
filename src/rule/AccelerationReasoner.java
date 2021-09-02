@@ -1,4 +1,5 @@
 package rule;
+import model.*;
 
 public class AccelerationReasoner implements Reasoner {
     @Override
@@ -18,8 +19,17 @@ public class AccelerationReasoner implements Reasoner {
      * When this happens, you will know that a trend begins or that some big volatility happens.
      */
     @Override
-    public void takeAction() {
-        System.out.println("Smile");
+    public void takeAction(TimeFrame window) {
+       Candle lastCandle = window.getCandles().get(window.getCandles().size() - 1);
+	   if (lastCandle.getTicks().size() >= 2) {
+		   Tick secondLastTick = lastCandle.getTicks().get(lastCandle.getTicks().size()-2);
+		   Tick lastTick = lastCandle.getTicks().get(lastCandle.getTicks().size()-1);
+		   if (lastTick.getSellPrice() - secondLastTick.getSellPrice() > 1.) {
+			   System.out.println("Acceleration detected");
+		   }
+			   
+	   }
+		
     }
 
 }

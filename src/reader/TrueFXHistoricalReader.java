@@ -29,8 +29,8 @@ public class TrueFXHistoricalReader implements BasicReader {
 
         File file = new File(path);
         BufferedReader br = new BufferedReader(new FileReader(file));
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd HH:mm:ss.SSS");
-
+        //SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd HH:mm:ss.SSS");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("SSSS");
         String st;
         while ((st = br.readLine()) != null) {
 //            String currentPrice = st.split(",")[3];

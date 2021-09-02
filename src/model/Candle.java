@@ -98,4 +98,7 @@ public class Candle {
         return sum / ticks.size();
     }
 
+	public List<Tick> getTicks(){ 
+		return ticks;
+	}
 }
