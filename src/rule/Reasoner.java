@@ -7,5 +7,5 @@ import java.util.List;
 public interface Reasoner {
     public void openPosition();
     public void closePosition();
-    public void takeAction();
+    public void takeAction(List<Candle> candles);
 }

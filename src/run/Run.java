@@ -20,7 +20,11 @@ import java.util.Locale;
 public class Run {
 
     public static void main(String[] args) throws IOException {
-       System.out.println("Git for Android");
+//       System.out.println("Git for Android");
+//    	for (String key : System.getProperties()) {
+//    		System.out.println(key + " = " + System.getenv().get(key));
+//    	}
+    	System.getProperties().list(System.out);
 		initFrame();
 //        System.out.println(generateSample());
     }
@@ -37,7 +41,7 @@ public class Run {
         long period = 3 * 1000;
         TimeFrame window = new TimeFrame(period, reasoners);
         try {
-            reader.read(window, "ticks.csv");
+            reader.read(window, "src/run/ticks.csv");
 			
 		} catch (Exception e) {
             e.printStackTrace();

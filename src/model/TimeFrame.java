@@ -59,7 +59,9 @@ public class TimeFrame {
             timeToOpenNewCandle = cal.getTimeInMillis() + period;
         }
 
-
+        for (Reasoner reasoner : reasoners.getReasoners()) {
+        	reasoner.takeAction(candles);
+        }
 
     }
 
