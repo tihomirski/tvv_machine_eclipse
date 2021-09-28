@@ -26,6 +26,7 @@ public class Run {
 //    	}
 //    	PC
 		//AIDE
+		//spck editor
     	System.getProperties().list(System.out);
 		initFrame();
 //        System.out.println(generateSample());
