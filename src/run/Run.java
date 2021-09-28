@@ -25,6 +25,7 @@ public class Run {
 //    		System.out.println(key + " = " + System.getenv().get(key));
 //    	}
 //    	PC
+		//AIDE
     	System.getProperties().list(System.out);
 		initFrame();
 //        System.out.println(generateSample());
