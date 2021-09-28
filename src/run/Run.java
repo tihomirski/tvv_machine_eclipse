@@ -24,7 +24,8 @@ public class Run {
 //    	for (String key : System.getProperties()) {
 //    		System.out.println(key + " = " + System.getenv().get(key));
 //    	}
-//    	spck editorrrrrrr
+//    	PC
+		//AIDE
     	System.getProperties().list(System.out);
 		initFrame();
 //        System.out.println(generateSample());
